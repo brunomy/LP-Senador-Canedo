@@ -1,0 +1,204 @@
+.header_content{
+    &[data-scroll="true"]{
+        .space_header{
+            height: 70px;
+        }
+        header {
+            border-color: #0046AE;
+            height: 70px;
+
+            .container{
+                .logo{
+                    height: 59px;
+                }
+                .menu_content button.whatsapp{
+                    height: 45px;
+                }
+            }
+        }
+
+    }
+    .space_header{
+        height: 140px;
+        transition: all 0.3s;
+        background: red;
+    }
+    header {
+        background: #fff;
+        height: 138px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #fff;
+        transition: all 0.3s;
+    
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+    
+            .logo{
+                width: 100px;
+                height: 100px;
+                transition: all 0.3s;
+    
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: left;
+                }
+            }
+            .menu_content{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+    
+                button.scroll{
+                    text-transform: none;
+                    font-size: 13px;
+                    color: #000;
+                    min-width: 0;
+                    padding: 10px;
+                }
+                button.whatsapp{
+                    font-family: 'Karla', sans-serif !important;
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 0;
+                    background: #25D366;
+                    color: #fff;
+                    width: 335px;
+                    height: 60px;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    margin-left: 20px;
+                    transition: all 0.3s;
+    
+                    img{}
+                }
+            }
+            button.menu{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px){
+    .header_content{
+        .space_header{
+            height: 108px;
+        }
+        header {
+            height: 108px;
+
+            .container{
+                .menu_content{
+                    button.scroll{
+                        padding: 5px;
+                    }
+                    button.whatsapp{
+                        font-size: 14px;
+                        gap: 6px;
+                        width: 245px;
+                        height: 45px;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 900px){
+    .header_content{
+        &[data-open="true"]{
+            header .container .menu_content{
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+        header {
+            .container{
+                .logo{
+                    position: relative;
+                    z-index: 101;
+                }
+                .menu_content{
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #fff;
+                    z-index: 100;
+                    flex-direction: column;
+                    padding: 130px 0 0;
+                    gap: 14px;
+                    transition: all .3s;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                button.menu{
+                    display: block;
+                    position: relative;
+                    z-index: 101;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 550px){
+    .header_content{
+        .space_header{
+        }
+        header {
+            .container{
+                .logo{
+                    img{
+                    }
+                }
+                .menu_content{
+                    button.scroll{
+                    }
+                    button.whatsapp{
+                        img{}
+                    }
+                }
+                button.menu{
+                }
+            }
+        }
+    }
+}
+@media (max-width: px){
+    .header_content{
+        .space_header{
+        }
+        header {
+            .container{
+                .logo{
+                    img{
+                    }
+                }
+                .menu_content{
+                    button.scroll{
+                    }
+                    button.whatsapp{
+                        img{}
+                    }
+                }
+                button.menu{
+                }
+            }
+        }
+    }
+}
