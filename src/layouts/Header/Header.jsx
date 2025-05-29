@@ -13,7 +13,6 @@ export default function Header() {
     useEffect(() => {
         const handleScroll = () => {
           const scrollY = window.scrollY;
-          console.log('Scroll Y:', scrollY);
 
           if(scrollY > 0) {
             setScroll(true);

@@ -21,7 +21,6 @@
     .space_header{
         height: 140px;
         transition: all 0.3s;
-        background: red;
     }
     header {
         background: #fff;
@@ -151,52 +150,6 @@
                     display: block;
                     position: relative;
                     z-index: 101;
-                }
-            }
-        }
-    }
-}
-@media (max-width: 550px){
-    .header_content{
-        .space_header{
-        }
-        header {
-            .container{
-                .logo{
-                    img{
-                    }
-                }
-                .menu_content{
-                    button.scroll{
-                    }
-                    button.whatsapp{
-                        img{}
-                    }
-                }
-                button.menu{
-                }
-            }
-        }
-    }
-}
-@media (max-width: px){
-    .header_content{
-        .space_header{
-        }
-        header {
-            .container{
-                .logo{
-                    img{
-                    }
-                }
-                .menu_content{
-                    button.scroll{
-                    }
-                    button.whatsapp{
-                        img{}
-                    }
-                }
-                button.menu{
                 }
             }
         }
