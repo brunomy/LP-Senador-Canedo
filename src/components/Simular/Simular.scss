@@ -1,0 +1,127 @@
+.simular{
+    .container{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 1070px;
+            height: 100%;
+            left: 515px;
+            top: 0;
+            background: #EAAA04;
+            border-radius: 55px 0 0 0;
+        }
+
+        .left{
+            width: 100%;
+            max-width: 445px;
+            height: 470px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 0 35px;
+
+            svg{
+                margin: 0 0 45px;
+            }
+            h2{
+                font-size: 48px;
+                font-weight: normal;
+                margin: 0 0 35px;
+
+                b{
+                    color: #0046AE;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: 27px;
+                margin: 0;
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            width: 590px;
+        }
+    }
+
+    @media (max-width: 1200px){
+        .container{
+            &::before{
+                left: 455px;
+            }
+            .left{
+                height: 390px;
+                max-width: 395px;
+
+                svg{
+                    width: 50px;
+                    height: auto;
+                    margin: 0 0 30px;
+                }
+                h2{
+                    font-size: 38px;
+                    line-height: 45px;
+                    margin: 0 0 25px;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 25px;
+                }
+            }
+            .right{
+                width: calc(100% - 475px);
+            }
+        }
+    }
+    @media (max-width: 950px){
+        background: #EAAA04;
+        padding: 70px 0;
+
+        .container{
+            flex-direction: column;
+            align-items: center;
+
+            &::before{
+                display: none;
+            }
+    
+            .left{
+                color: #fff;
+                width: 100%;
+                max-width: 550px;
+                height: auto;
+                padding: 0;
+                margin: 0 0 45px;
+
+                svg{
+                    *{ stroke: #fff; }
+                }
+                h2{
+                    font-size: 32px;
+                    line-height: 40px;
+                    margin: 0 0 15px;
+                }
+                p{
+                }
+            }
+            .right{
+                width: 100%;
+                max-width: 550px;
+            }
+        }
+    }
+    @media (max-width: 550px){
+        .container{
+            .left{
+                svg{
+                    width: 42px;
+                }
+            }
+        }
+    }
+}

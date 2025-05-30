@@ -1,0 +1,110 @@
+.form_simular{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .input_content{
+        width: calc(100% - 170px);
+        margin: 0 0 23px;
+
+        &.full{
+            width: 100%;
+        }
+
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 10px;
+
+            span{
+                color: #0046AE;
+                font-size: 16px;
+            }
+        }
+        input{
+            width: 100%;
+            height: 64px;
+            border-radius: 4px;
+            background: #fff;
+            border: 1px solid  #D9D9D9;
+            color: #0046AE;
+            padding: 0 30px;
+            font-size: 16px;
+            outline: none;
+
+            &[disabled]{
+                background: #cdcdcd;
+                color: #fff;
+
+                &::placeholder{
+                    color: #fff;
+                }
+            }
+
+            &::placeholder{
+                color: #C9C9C9;
+            }
+        }
+    }
+    .radio_content{
+        .title{
+            margin: 0 0 5px;
+
+            span{
+                font-size: 16px;
+                color: #0046AE;
+            }
+        }
+        .checkbox{
+            display: flex;
+            gap: 10px;
+            >div{
+                input{
+                    display: none;
+
+                    &:checked + label::before{ background: #fff; }
+                }
+                label{
+                    position: relative;
+                    font-size: 12px;
+                    color: #0046AE;
+                    padding: 0 0 0 16px;
+                    cursor: pointer;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 10px;
+                        height: 10px;
+                        border: 1px solid #fff;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+    }
+    >button{
+        width: 100%;
+        background: #0046AE;
+        color: #fff;
+        height: 64px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    @media (max-width: 550px){
+        .input_content{
+            width: 100%;
+        }
+        .radio_content{
+            margin: 0 0 23px;
+        }
+    }
+}
