@@ -1,0 +1,132 @@
+.banner{
+    border-top: 1px solid #ECECEC;
+
+    .container{
+        height: 620px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .left{
+            width: 570px;
+
+            h1{
+                font-weight: normal;
+                font-size: 48px;
+                line-height: 60px;
+                color: #000;
+                margin: 0 0 40px;
+            }
+            p{
+                font-size: 22px;
+                color: #4A4A4A;
+                margin: 0 0 60px;
+            }
+            >div{
+                width: 100%;
+                max-width: 480px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: space-between;
+                align-items: center;
+
+                button{}
+                img{}
+            }
+        }
+        .right{
+            img{
+                position: absolute;
+                top: 0;
+                left: 605px;
+            }
+        }
+    }
+
+    @media (max-width: 1100px){
+        .container{
+            height: 498px;
+
+            .left{
+                h1{
+                    font-size: 38px;
+                    line-height: 45px;
+                    margin: 0 0 30px;
+                }
+                p{
+                    font-size: 18px;
+                    margin: 0 0 40px;
+                }
+            }
+            .right{
+                img{
+                    left: 495px;
+                    height: 500px;
+                }
+            }
+        }
+    }
+    @media (max-width: 900px){
+        .container{
+            height: 398px;
+
+            .left{
+                width: 450px;
+
+                h1{
+                    font-size: 32px;
+                    line-height: 40px;
+                    margin: 0 0 20px;
+                }
+                p{
+                    margin: 0 0 30px;
+                }
+            }
+            .right{
+                img{
+                    left: 445px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+    @media (max-width: 700px){
+        .container{
+            flex-direction: column;
+            align-items: flex-start;
+            height: auto;
+
+            .left{
+                width: 100%;
+                max-width: 460px;
+                padding: 50px 0 20px;
+            }
+            .right{
+                height: 442px;
+                overflow: hidden;
+
+                img{
+                    left: initial;
+                    top: initial;
+                    position: relative;
+                    height: 444px;
+                }
+            }
+        }
+    }
+    @media (max-width: 550px){
+        .container{
+            .left{
+                max-width: 290px;
+            }
+            .right{
+                height: 80.3vw;
+
+                img{
+                    height: 80.7vw;
+                }
+            }
+        }
+    }
+}
