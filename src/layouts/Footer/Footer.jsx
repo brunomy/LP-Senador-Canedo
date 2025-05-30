@@ -21,7 +21,7 @@ export default function Footer() {
                     <li>As áreas que são entregues equipadas constam expressamente no Memorial Descritivo. A área ilustrada é uma sugestão de uso, e depende de contratação do serviço pelo condomínio.</li>
                 </ul>
                 <div className="politica_privacidade">
-                    <p>Todos os direitos reservados - Política de Privacidade - CNPJ: 00.000.000/0001-00 CRECI – 00000000</p>
+                    <p>Todos os direitos reservados - Política de Privacidade - CNPJ: 00.000.000/0001-00 CRECI – 00000000</p>
                     <Button>
                         Voltar para o topo
                         <img src={arrowTop} alt="" />
