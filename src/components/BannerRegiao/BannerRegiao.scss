@@ -1,0 +1,130 @@
+.banner_regiao{
+    .container{
+        position: relative;
+        height: 471px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 1055px;
+            height: 430px;
+            background: #F5F5F5;
+            right: -335px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            border-radius: 50px 0 0 50px;
+        }
+
+        >img{
+            position: absolute;
+            left: -335px;
+            height: 100%;
+        }
+        
+        >div{
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 600px;
+
+            h2{
+                font-size: 46px;
+                line-height: 60px;
+                font-weight: normal;
+                margin: 0 0 30px;
+            }
+            p{
+                font-size: 18px;
+                color: #000;
+                margin: 0 0 30px;
+            }
+        }
+    }
+
+    @media (max-width: 1200px){
+        .container{
+            height: 400px;
+
+            &::before{
+                height: 360px;
+                right: -455px;
+            }
+    
+            >img{
+                left: -135px;
+            }
+            
+            >div{
+                max-width: 500px;
+
+                h2{
+                    font-size: 38px;
+                    line-height: 45px;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+    @media (max-width: 800px){
+        padding: 0 0 20px;
+
+        .container{
+            height: auto;
+            flex-direction: column;
+            align-items: initial;
+
+            &::before{ display: none; }
+    
+            >img{
+                position: relative;
+                left: -20px;
+                float: right;
+                width: 100vw;
+            }
+            
+            >div{
+                background: #F5F5F5;
+                margin: -100px auto 0;
+                padding: 40px 40px;
+                border-radius: 40px;
+
+                h2{
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+    @media (max-width: 550px){
+        .container{
+            padding-top: 215px !important;
+
+            >img{
+                position: absolute;
+                width: initial;
+                height: 315px;
+                left: initial;
+                right: 0;
+                top: 0;
+            }
+            
+            >div{
+                margin: 0 auto;
+                padding: 55px 25px;
+
+                h2{
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin: 0 0 20px;
+                }
+            }
+        }
+    }
+}
