@@ -33,7 +33,7 @@ export default function CasasCarousel() {
     };
 
     return (
-        <Box className="casas_carousel">
+        <Box className="casas_carousel" id="casas">
             <Box className="container">
                 <h2>Casas para quem <b>quer viver bem</b></h2>
                 <p>Casas prontas para morar em Senador Canedo, com infraestrutura completa, documentação regularizada e condições facilitadas</p>

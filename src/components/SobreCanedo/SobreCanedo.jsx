@@ -5,7 +5,7 @@ import sobreCanedo from './../../assets/sobreCanedo.png'
 
 export default function SobreCanedo() {
     return (
-        <Box className="sobre_canedo">
+        <Box className="sobre_canedo" id="sobre">
             <div className="container">
                 <div className="text_content">
                     <h2>Sobre <b>minha casa Canedo</b></h2>

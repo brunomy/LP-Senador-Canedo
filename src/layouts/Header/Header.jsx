@@ -28,19 +28,31 @@ export default function Header() {
         };
     }, []);
 
+    const scrollToElementById = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setOpen(false)
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <Box className="header_content" data-scroll={scroll} data-open={open}>
             <div className="space_header"></div>
             <header>
                 <Box className="container">
-                    <div className="logo" onClick={() => setScroll(!scroll)}>
+                    <div className="logo" onClick={() => scrollToTop()}>
                         <img src={logo} alt="Minha casa canedo" />
                     </div>
                     <div className="menu_content">
-                        <Button className="scroll">Simule</Button>
-                        <Button className="scroll">Casas</Button>
-                        <Button className="scroll">Sobre Minha Casa Canedo</Button>
-                        <Button className="scroll">Perguntas frequentes</Button>
+                        <Button className="scroll" onClick={() => scrollToElementById('simule')}>Simule</Button>
+                        <Button className="scroll" onClick={() => scrollToElementById('casas')}>Casas</Button>
+                        <Button className="scroll" onClick={() => scrollToElementById('sobre')}>Sobre Minha Casa Canedo</Button>
+                        <Button className="scroll" onClick={() => scrollToElementById('perguntas_frequentes')}>Perguntas frequentes</Button>
                         <Button className="whatsapp">
                             <img src={whatsapp} alt="" />
                             FALE COM UM ESPECIALISTA

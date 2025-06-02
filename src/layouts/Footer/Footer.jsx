@@ -5,10 +5,14 @@ import logo from '../../assets/logo.svg';
 import arrowTop from '../../assets/arrowTop.svg';
 
 export default function Footer() {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return(
         <footer>
             <Box className="container">
-                <div className="logo">
+                <div className="logo" onClick={() => scrollToTop()}>
                     <img src={logo} alt="Minha casa canedo" />
                 </div>
                 <ul>
@@ -22,7 +26,7 @@ export default function Footer() {
                 </ul>
                 <div className="politica_privacidade">
                     <p>Todos os direitos reservados - Política de Privacidade - CNPJ: 00.000.000/0001-00 CRECI – 00000000</p>
-                    <Button>
+                    <Button onClick={() => scrollToTop()}>
                         Voltar para o topo
                         <img src={arrowTop} alt="" />
                     </Button>

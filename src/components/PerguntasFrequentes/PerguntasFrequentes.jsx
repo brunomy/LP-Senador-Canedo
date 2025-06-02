@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 export default function PerguntasFrequentes() {
     return (
-        <Box className="perguntas_frequentes">
+        <Box className="perguntas_frequentes" id="perguntas_frequentes">
             <Box className="container">
                 <h2>Perguntas <b>Frequentes</b></h2>
 
