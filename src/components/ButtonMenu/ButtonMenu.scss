@@ -3,7 +3,7 @@
     25%{ transform: translate(-50%, -8px); } 
     50%{ transform: translate(-50%, -1px); width: 30px; } 
     75%{ transform: translate(-50%, -1px); width: 30px; } 
-    100%{ transform: translate(-50%, -1px) rotate(45deg); width: 30px; background: #000; }
+    100%{ transform: translate(-50%, -1px) rotate(45deg); width: 30px; background: #0046AE; }
 }
 @keyframes open_menu_2 {
     0%{ width: 21px; opacity: 1; } 
@@ -16,11 +16,11 @@
     25%{ transform: translate(-50%, 6px); } 
     50%{ transform: translate(-50%, -1px); width: 30px; } 
     75%{ transform: translate(-50%, -1px); width: 30px; } 
-    100%{ transform: translate(-50%, -1px) rotate(-45deg); width: 30px; background: #000; }
+    100%{ transform: translate(-50%, -1px) rotate(-45deg); width: 30px; background: #0046AE; }
 }
 
 @keyframes close_menu_1 {
-    0%{ transform: translate(-50%, -1px) rotate(45deg); width: 30px; background: #000; }
+    0%{ transform: translate(-50%, -1px) rotate(45deg); width: 30px; background: #0046AE; }
     25%{ transform: translate(-50%, -1px); width: 30px; } 
     75%{ transform: translate(-50%, -1px); } 
     50%{ transform: translate(-50%, -1px); } 
@@ -33,7 +33,7 @@
     100%{  opacity: 1; width: 21px; } 
 }
 @keyframes close_menu_3 {
-    0%{ transform: translate(-50%, -1px) rotate(-45deg); width: 30px; background: #000;  }
+    0%{ transform: translate(-50%, -1px) rotate(-45deg); width: 30px; background: #0046AE;  }
     25%{ transform: translate(-50%, -1px); width: 30px; } 
     75%{ transform: translate(-50%, -1px); } 
     50%{ transform: translate(-50%, -1px); } 
@@ -91,7 +91,7 @@ button.menu{
             animation-name: open_menu_1;
             transform: translate(-50%, -1px) rotate(45deg);
             width: 30px;
-            background: #000;
+            background: #0046AE;
         }
         .span_2{
             animation-name: open_menu_2;
@@ -101,7 +101,7 @@ button.menu{
             animation-name: open_menu_3;
             transform: translate(-50%, -1px) rotate(-45deg);
             width: 30px;
-            background: #000;
+            background: #0046AE;
         }
     }
     
