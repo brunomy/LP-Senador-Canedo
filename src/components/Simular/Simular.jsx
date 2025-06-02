@@ -2,7 +2,7 @@ import FormSimular from '../FormSimular/FormSimular'
 import './Simular.scss'
 import { Box } from '@mui/material'
 
-export default function Simular() {
+export default function Simular({ startWhatsAppChat }) {
     return (
         <Box className="simular" id="simule">
             <Box className="container">
@@ -12,7 +12,7 @@ export default function Simular() {
                     <p>Descubra como comprar sua casa em Senador Canedo com parcelas que cabem no seu bolso.</p>
                 </div>
                 <div className="right">
-                    <FormSimular />
+                    <FormSimular startWhatsAppChat={startWhatsAppChat} />
                 </div>
             </Box>
         </Box>

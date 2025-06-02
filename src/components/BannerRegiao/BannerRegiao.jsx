@@ -4,7 +4,7 @@ import ArrowButton from './../ArrowButton/ArrowButton'
 
 import bannerCanedo from './../../assets/bannerCanedo.png'
 
-export default function BannerRegiao() {
+export default function BannerRegiao({startWhatsAppChat}) {
     return (
         <Box className="banner_regiao">
             <Box className="container">
@@ -13,7 +13,7 @@ export default function BannerRegiao() {
                 <div>
                     <h2>Compre sua casa em <b>Senador Canedo</b></h2>
                     <p>Troque seu aluguel, pela prestação da SUA CASA.</p>
-                    <ArrowButton>Simule Agora</ArrowButton>
+                    <ArrowButton startWhatsAppChat={startWhatsAppChat}>Simule Agora</ArrowButton>
                 </div>
             </Box>
         </Box>

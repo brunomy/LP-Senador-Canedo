@@ -6,7 +6,7 @@ import logo from '../../assets/logo.svg';
 import whatsapp from '../../assets/whatsapp.svg';
 import ButtonMenu from '../../components/ButtonMenu/ButtonMenu';
 
-export default function Header() {
+export default function Header({ startWhatsAppChat }) {
     const [open, setOpen] = useState(false);
     const [scroll, setScroll] = useState(false);
 
@@ -31,9 +31,13 @@ export default function Header() {
     const scrollToElementById = (id) => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const yOffset = -50; // scroll vai parar 20px antes
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      
+          window.scrollTo({ top: y, behavior: 'smooth' });
         }
-        setOpen(false)
+      
+        setOpen(false);
     };
 
     const scrollToTop = () => {
@@ -53,7 +57,7 @@ export default function Header() {
                         <Button className="scroll" onClick={() => scrollToElementById('casas')}>Casas</Button>
                         <Button className="scroll" onClick={() => scrollToElementById('sobre')}>Sobre Minha Casa Canedo</Button>
                         <Button className="scroll" onClick={() => scrollToElementById('perguntas_frequentes')}>Perguntas frequentes</Button>
-                        <Button className="whatsapp">
+                        <Button className="whatsapp" onClick={() => startWhatsAppChat('Olá, gostaria de mais informações sobre o Minha Casa Minha Vida Senador Canedo.')}>
                             <img src={whatsapp} alt="" />
                             FALE COM UM ESPECIALISTA
                         </Button>

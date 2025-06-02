@@ -8,13 +8,19 @@ import SobreCanedo from './components/SobreCanedo/SobreCanedo'
 import Layout from './layouts/Layout/Layout'
 
 function App() {
+  const startWhatsAppChat = (message = '') => {
+    const phoneNumber = '5562999148826';
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(url, '_blank');
+  };
 
   return (
-    <Layout>
-      <Banner />
-      <Simular />
+    <Layout startWhatsAppChat={startWhatsAppChat}>
+      <Banner startWhatsAppChat={startWhatsAppChat} />
+      <Simular startWhatsAppChat={startWhatsAppChat} />
       <CasasCarousel />
-      <BannerRegiao />
+      <BannerRegiao startWhatsAppChat={startWhatsAppChat} />
       <SobreCanedo />
       <PerguntasFrequentes />
     </Layout>

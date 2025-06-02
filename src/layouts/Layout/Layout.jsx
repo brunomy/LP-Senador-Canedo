@@ -3,10 +3,10 @@ import Header from '../Header/Header';
 import './Layout.scss';
 import Box from '@mui/material/Box';
 
-export default function Layout({ children }) {
+export default function Layout({ children, startWhatsAppChat }) {
     return (
         <Box className="layout">
-            <Header />
+            <Header startWhatsAppChat={startWhatsAppChat} />
             { children }
             <Footer />
         </Box>
