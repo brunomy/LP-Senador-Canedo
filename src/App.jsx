@@ -3,6 +3,7 @@ import Banner from './components/Banner/Banner'
 import BannerRegiao from './components/BannerRegiao/BannerRegiao'
 import CasasCarousel from './components/CasasCarousel/CasasCarousel'
 import Simular from './components/Simular/Simular'
+import SobreCanedo from './components/SobreCanedo/SobreCanedo'
 import Layout from './layouts/Layout/Layout'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Simular />
       <CasasCarousel />
       <BannerRegiao />
+      <SobreCanedo />
     </Layout>
   )
 }
