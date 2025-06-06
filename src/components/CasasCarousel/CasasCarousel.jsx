@@ -8,10 +8,12 @@ import Slider from "react-slick";
 
 
 //Imagens
-import emp1 from './../../assets/empreendimentos/emp1.png'
+import emp1 from './../../assets/empreendimentos/empreendimento1.jpeg'
+import emp2 from './../../assets/empreendimentos/empreendimento2.jpeg'
+import emp3 from './../../assets/empreendimentos/empreendimento3.jpeg'
+import emp4 from './../../assets/empreendimentos/empreendimento4.jpeg'
 
-
-export default function CasasCarousel() {
+export default function CasasCarousel({ startWhatsAppChat }) {
     const settings = {
         dots: false,
         infinite: true,
@@ -42,33 +44,31 @@ export default function CasasCarousel() {
                     <Slider {...settings}>
                         <CasaItem 
                             imagem={emp1}
-                            titulo={'Casas Boa Vista'}
-                            metrosQuad={60}
-                            dados={['Documentação facilitada', 'Aceita financiamento pela Caixa']}
+                            titulo={'Terra bela'}
+                            metrosQuad={'125m² a 180m²'}
+                            dados={['Casas de 93m² a 124m²', 'Aceita financiamento pela Caixa']}
+                            startWhatsAppChat={ startWhatsAppChat }
                         />
                         <CasaItem 
-                            imagem={emp1}
-                            titulo={'Casas Boa Vista'}
-                            metrosQuad={60}
-                            dados={['Documentação facilitada', 'Aceita financiamento pela Caixa']}
+                            imagem={emp2}
+                            titulo={'Top do lago'}
+                            metrosQuad={'125m² a 180m²'}
+                            dados={['Casas de 93m² a 124m²', 'Aceita financiamento pela Caixa']}
+                            startWhatsAppChat={ startWhatsAppChat }
                         />
                         <CasaItem 
-                            imagem={emp1}
-                            titulo={'Casas Boa Vista'}
-                            metrosQuad={60}
-                            dados={['Documentação facilitada', 'Aceita financiamento pela Caixa']}
+                            imagem={emp3}
+                            titulo={'São Francisco'}
+                            metrosQuad={'125m² a 180m²'}
+                            dados={['Casas de 93m² a 124m²', 'Aceita financiamento pela Caixa']}
+                            startWhatsAppChat={ startWhatsAppChat }
                         />
                         <CasaItem 
-                            imagem={emp1}
-                            titulo={'Casas Boa Vista'}
-                            metrosQuad={60}
-                            dados={['Documentação facilitada', 'Aceita financiamento pela Caixa']}
-                        />
-                        <CasaItem 
-                            imagem={emp1}
-                            titulo={'Casas Boa Vista'}
-                            metrosQuad={60}
-                            dados={['Documentação facilitada', 'Aceita financiamento pela Caixa']}
+                            imagem={emp4}
+                            titulo={'Parque dos buritis'}
+                            metrosQuad={'125m² a 180m²'}
+                            dados={['Casas de 93m² a 124m²', 'Aceita financiamento pela Caixa']}
+                            startWhatsAppChat={ startWhatsAppChat }
                         />
                     </Slider>
                 </div>
@@ -77,7 +77,7 @@ export default function CasasCarousel() {
     )
 }
 
-function CasaItem({ imagem, titulo, metrosQuad, dados = [] }) {
+function CasaItem({ imagem, titulo, metrosQuad, dados = [], startWhatsAppChat }) {
     return (
         <Box className="casa_item">
             <div className="imagem">
@@ -87,8 +87,11 @@ function CasaItem({ imagem, titulo, metrosQuad, dados = [] }) {
                 </div>
             </div>
             <h3>{titulo}</h3>
-            <p>a partir de {metrosQuad}m²</p>
-            <Button>Simule agora</Button>
+            <p>lotes de {metrosQuad}</p>
+            <Button onClick={() => startWhatsAppChat(
+                'Olá, gostaria de mais informações sobre o Minha Casa Minha Vida Senador Canedo. '+
+                'Tive interesse no loteamento *'+titulo+'*.'
+            )}>Simule agora</Button>
         </Box>
     )
 }

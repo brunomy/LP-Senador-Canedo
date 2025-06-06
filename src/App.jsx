@@ -19,7 +19,7 @@ function App() {
     <Layout startWhatsAppChat={startWhatsAppChat}>
       <Banner startWhatsAppChat={startWhatsAppChat} />
       <Simular startWhatsAppChat={startWhatsAppChat} />
-      <CasasCarousel />
+      <CasasCarousel startWhatsAppChat={startWhatsAppChat}/>
       <BannerRegiao startWhatsAppChat={startWhatsAppChat} />
       <SobreCanedo />
       <PerguntasFrequentes />
