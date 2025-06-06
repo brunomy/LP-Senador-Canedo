@@ -46,28 +46,28 @@ export default function CasasCarousel({ startWhatsAppChat }) {
                             imagem={emp1}
                             titulo={'Terra bela'}
                             metrosQuad={'125m² a 180m²'}
-                            dados={['Casas de 93m² a 124m²', 'Aceita financiamento pela Caixa']}
+                            metroscasa={'93m² a 124m²'}
                             startWhatsAppChat={ startWhatsAppChat }
                         />
                         <CasaItem 
                             imagem={emp2}
                             titulo={'Top do lago'}
                             metrosQuad={'125m² a 180m²'}
-                            dados={['Casas de 93m² a 124m²', 'Aceita financiamento pela Caixa']}
+                            metroscasa={'93m² a 124m²'}
                             startWhatsAppChat={ startWhatsAppChat }
                         />
                         <CasaItem 
                             imagem={emp3}
                             titulo={'São Francisco'}
                             metrosQuad={'125m² a 180m²'}
-                            dados={['Casas de 93m² a 124m²', 'Aceita financiamento pela Caixa']}
+                            metroscasa={'93m² a 124m²'}
                             startWhatsAppChat={ startWhatsAppChat }
                         />
                         <CasaItem 
                             imagem={emp4}
                             titulo={'Parque dos buritis'}
                             metrosQuad={'125m² a 180m²'}
-                            dados={['Casas de 93m² a 124m²', 'Aceita financiamento pela Caixa']}
+                            metroscasa={'93m² a 124m²'}
                             startWhatsAppChat={ startWhatsAppChat }
                         />
                     </Slider>
@@ -77,17 +77,18 @@ export default function CasasCarousel({ startWhatsAppChat }) {
     )
 }
 
-function CasaItem({ imagem, titulo, metrosQuad, dados = [], startWhatsAppChat }) {
+function CasaItem({ imagem, titulo, metrosQuad, metroscasa, startWhatsAppChat }) {
     return (
         <Box className="casa_item">
             <div className="imagem">
                 <img src={imagem} alt={titulo} />
-                <div className="dados">
+                {/* <div className="dados">
                     {dados.map((dado) => <span>{dado}</span>)}
-                </div>
+                </div> */}
             </div>
             <h3>{titulo}</h3>
             <p>lotes de {metrosQuad}</p>
+            <p>casas de {metroscasa}</p>
             <Button onClick={() => startWhatsAppChat(
                 'Olá, gostaria de mais informações sobre o Minha Casa Minha Vida Senador Canedo. '+
                 'Tive interesse no loteamento *'+titulo+'*.'
