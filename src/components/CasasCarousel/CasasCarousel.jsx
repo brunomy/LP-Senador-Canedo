@@ -21,7 +21,7 @@ export default function CasasCarousel({ startWhatsAppChat }) {
         slidesToShow: 3,
         slidesToScroll: 3,
         center: true,
-        arrows: false,
+        arrows: true,
         variableWidth: true,
         responsive: [
             {
@@ -29,6 +29,14 @@ export default function CasasCarousel({ startWhatsAppChat }) {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
                 }
             }
         ]
